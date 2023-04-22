@@ -59,10 +59,10 @@ function request(url, method='GET',timeout=3000, data={}, header = {}) {
 }
 
 export default {
-  get(url, data, header = {}) {
-    return request(url, 'GET', data, header)
+  get(url, timeout, data, header = {}) {
+    return request(url, 'GET',timeout, data, header)
   },
-  post(url, data, header = {}) {
-    return request(url, 'POST', data, header)
+  post(url, timeout, data={}, header = {}) {
+    return request(url, 'POST', timeout,data, header)
   }
 }

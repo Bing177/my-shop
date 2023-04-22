@@ -9,6 +9,9 @@ const options = {
 	key:fs.readFileSync('./server.key'),
 	cert:fs.readFileSync('./server.cert')
 }
+// 对请求体格式处理
+app.use(express.json())
+app.use(express.urlencoded({extended:false}))
 
 app.use('/shop',router)
 
