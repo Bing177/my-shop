@@ -1,17 +1,17 @@
 <template>
-	<view class="cart">cart
+	<view class="search">
+		search
 	</view>
 </template>
 
 <script>
 	export default {
+		data() {
+			return{
+			}
+		}
 	}
 </script>
 
 <style lang="scss" scoped>
-.cart{
-	width: 100%;
-	display: flex;
-	
-}
 </style>

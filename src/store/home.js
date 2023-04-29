@@ -32,6 +32,7 @@ export default {
 			try{
 				const res = await request.post('/shop/api/newfloor',3000,{page,pageSize})
 				commit('GETNEWFLOORINFO',res.data)
+				uni.$showMsg('刷新成功')
 				uni.stopPullDownRefresh()
 			}catch(e){
 				uni.$showMsg(e.message)
@@ -45,7 +46,7 @@ export default {
 			}catch(e){
 				uni.$showMsg(e.message)
 			}
-		}
+		},
 	},
 	mutations:{
 		GETSWIPER(state,data){
@@ -77,7 +78,7 @@ export default {
 		},
 		GETFLOORSLEN(state,data){
 			state.floorsLen = data
-		}
+		},
 	},
 	state:{
 		swipers:[],//轮播图
