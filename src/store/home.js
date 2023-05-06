@@ -83,7 +83,7 @@ export default {
 	state:{
 		swipers:[],//轮播图
 		floors:[],//楼层信息
-		newFloors:[],
+		// newFloors:[],
 		floorsLen:0,
 	}
 }

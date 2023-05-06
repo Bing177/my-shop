@@ -1,4 +1,5 @@
 const express = require('express')
+// const qs = require('querystringify')
 const router = express.Router()
 
 
@@ -6,7 +7,7 @@ const router = express.Router()
 const digitalElectronics = [
 	{
 		id:getRand(),
-		title:'apple',
+		brand:'apple',
 		logo: 'https://pic2.imgdb.cn/item/64453d310d2dde5777220c00.jpg',
 		child:[
 			{
@@ -229,7 +230,7 @@ const digitalElectronics = [
 	},
 	{
 		id:getRand(),
-		title:'Xiaomi',
+		brand:'Xiaomi',
 		logo:'https://pic2.imgdb.cn/item/64453d530d2dde57772299af.png',
 		child:[
 			{
@@ -392,7 +393,7 @@ const digitalElectronics = [
 	},
 	{
 		id:getRand(),
-		title:'huawei',
+		brand:'huawei',
 		logo:'https://pic2.imgdb.cn/item/64453d7a0d2dde5777232dab.webp',
 		child:[
 			{
@@ -590,7 +591,7 @@ const digitalElectronics = [
 	},
 	{
 		id:getRand(),
-		title:'Lenovo',
+		brand:'Lenovo',
 		logo:'https://pic2.imgdb.cn/item/6445ed0f0d2dde5777e22f61.png',
 		child:[
 			{
@@ -645,7 +646,7 @@ const digitalElectronics = [
 	},
 	{
 		id:getRand(),
-		title:'ASUS',
+		brand:'ASUS',
 		logo:'https://pic2.imgdb.cn/item/6445f1a10d2dde5777e9b613.webp',
 		child:[
 			{
@@ -727,7 +728,7 @@ const digitalElectronics = [
 const beauty = [
 	{
 		id:getRand(),
-		title:'自然堂',
+		brand:'自然堂',
 		logo:'https://pic2.imgdb.cn/item/64453d8f0d2dde5777237bfd.png',
 		child:[
 			{
@@ -853,11 +854,160 @@ const beauty = [
 		]
 	}
 ]
+// 女装
+const dress = [
+	{
+		id:getRand(),
+		brand:'都市丽人',
+		logo:'https://pic2.imgdb.cn/item/645371530d2dde5777a189e3.png',
+		child:[
+			{
+				id:getRand(),
+				title:'内衣',
+				child:[
+					{
+						id:getRand(),
+						name:'【王牌爆款】小花心系列梅花蕾丝无钢圈内衣文胸小胸聚拢内衣女',
+						url:'https://pic2.imgdb.cn/item/645371d10d2dde5777a256e5.jpg',
+						price:56
+					},
+					{
+						id:getRand(),
+						name:'23年新品小胸聚拢显大女士内衣舒适抑菌侧收副乳无钢圈文胸罩',
+						url:'https://pic2.imgdb.cn/item/645372030d2dde5777a2a02b.jpg',
+						price:63
+					},
+					{
+						id:getRand(),
+						name:'【小胸聚拢显大】春夏强聚拢厚杯侧边软胶条支撑贴合蕾丝内衣文胸',
+						url:'https://pic2.imgdb.cn/item/645372410d2dde5777a2ff19.jpg',
+						price:49
+					}
+				]
+			},
+			{
+				id:getRand(),
+				title:'内裤',
+				child:[
+					{
+						id:getRand(),
+						name:'【亲肤舒适】舒适透气4条装收腹提臀内裤高弹三角裤女士内裤女',
+						url:'https://pic2.imgdb.cn/item/6453728a0d2dde5777a364d8.jpg',
+						price:39
+					},
+					{
+						id:getRand(),
+						name:'【4条装】40S棉质女士内裤抑菌裆舒适透气高弹中腰平角内裤女',
+						url:'https://pic2.imgdb.cn/item/645372c10d2dde5777a3b138.jpg',
+						price:49
+					}
+				]
+			}
+		]
+	},
+	{
+		id:getRand(),
+		brand:'太平鸟',
+		logo:'https://pic2.imgdb.cn/item/6453737c0d2dde5777a4d431.png',
+		child:[
+			{
+				id:getRand(),
+				title:'女裙',
+				child:[
+					{
+						id:getRand(),
+						name:'千鸟格牛仔短裙女夏季套装裙遮胯显瘦高腰半身裙子',
+						url:'https://pic2.imgdb.cn/item/645374350d2dde5777a60de4.jpg',
+						price:164
+					},
+					{
+						id:getRand(),
+						name:'学院风满印百褶半裙',
+						url:'https://pic2.imgdb.cn/item/645374850d2dde5777a6bec5.jpg',
+						price:114
+					},
+					{
+						id:getRand(),
+						name:'SPCN不规则裙',
+						url:'https://pic2.imgdb.cn/item/645374d10d2dde5777a75d5d.jpg',
+						price:373
+					},
+					{
+						id:getRand(),
+						name:'飞跃联名早春腰部镂空连衣裙女',
+						url:'https://pic2.imgdb.cn/item/64537b040d2dde5777af3f33.jpg',
+						price:196
+					},
+					{
+						id:getRand(),
+						name:'连衣裙夏季小香风方领短款裙子女优雅撞色',
+						url:'https://pic2.imgdb.cn/item/64537b640d2dde5777afd5c9.jpg',
+						price:302
+					}
+				]
+			},
+			{
+				id:getRand(),
+				title:'上衣',
+				child:[
+					{
+						id:getRand(),
+						name:'欧阳娜娜同款科米蛙联名摇粒绒外套女秋季休闲外套',
+						url:'https://pic2.imgdb.cn/item/645379e30d2dde5777adc1d1.jpg',
+						price:211
+					},
+					{
+						id:getRand(),
+						name:'衬衫女灯笼袖设计薄款上衣夏款空气感轻薄外搭',
+						url:'https://pic2.imgdb.cn/item/64537a1e0d2dde5777ae0750.jpg',
+						price:164
+					},
+					{
+						id:getRand(),
+						name:'女士时尚春季蝴蝶结绣花衬衫',
+						url:'https://pic2.imgdb.cn/item/64537a630d2dde5777ae5b4f.jpg',
+						price:173
+					}
+				]
+			},
+			{
+				id:getRand(),
+				title:'女裤装',
+				child:[
+					{
+						id:getRand(),
+						name:'冬季休闲裤运动针织长裤',
+						url:'https://pic2.imgdb.cn/item/64537ba50d2dde5777b02c93.jpg',
+						price:148
+					},
+					{
+						id:getRand(),
+						name:'阔腿裤女高腰垂感夏季薄款休闲',
+						url:'https://pic2.imgdb.cn/item/64537bdf0d2dde5777b089b4.jpg',
+						price:246
+					},
+					{
+						id:getRand(),
+						name:'高腰格纹休闲短裤女夏季宽松显瘦阔腿直筒格子裤',
+						url:'https://pic2.imgdb.cn/item/64537c1d0d2dde5777b0fbf6.jpg',
+						price:165
+					},
+					{
+						id:getRand(),
+						name:'品质系列秋季高腰显瘦休闲女裤百搭运动针织短裤',
+						url:'https://pic2.imgdb.cn/item/64537c4d0d2dde5777b1571d.jpg',
+						price:210
+					}
+				]
+			}
+		]
+	}
+]
 // 乔丹
 const jordon = [
 	{
 		id:getRand(),
-		title:'乔丹',
+		brand:'乔丹',
 		logo:'https://pic2.imgdb.cn/item/644601040d2dde577709ec35.png',
 		child:[
 			{
@@ -868,19 +1018,19 @@ const jordon = [
 						id:getRand(),
 						name:'飞影PB 3.0',
 						url:'https://pic2.imgdb.cn/item/644601970d2dde57770aceca.jpg',
-						price:''
+						price:138
 					},
 					{
 						id:getRand(),
 						name:'飞影3.0',
 						url:'https://pic2.imgdb.cn/item/644601f70d2dde57770b61c7.jpg',
-						price:""
+						price:110
 					},
 					{
 						id:getRand(),
 						name:'风行12',
 						url:'https://pic2.imgdb.cn/item/6446024a0d2dde57770be001.jpg',
-						price:''
+						price:238
 					}
 				]
 			},
@@ -892,13 +1042,13 @@ const jordon = [
 						id:getRand(),
 						name:'风刃',
 						url:'https://pic2.imgdb.cn/item/644602bb0d2dde57770c7a3a.jpg',
-						price:''
+						price:316
 					},
 					{
 						id:getRand(),
 						name:'战戟',
 						url:'https://pic2.imgdb.cn/item/644602e50d2dde57770cb3b4.jpg',
-						price:''
+						price:410
 					}
 				]
 			}
@@ -909,7 +1059,7 @@ const jordon = [
 const liNing = [
 	{
 		id:getRand(),
-		title:'Li Ning',
+		brand:'liNing',
 		logo:'https://pic2.imgdb.cn/item/6446037a0d2dde57770d706c.png',
 		child:[
 			{
@@ -920,7 +1070,7 @@ const liNing = [
 						id:getRand(),
 						name:'【2023新品】超轻V2-水蜜桃男子轻量高回弹篮球专业比赛鞋ABAT029-6',
 						url:'https://pic2.imgdb.cn/item/644604210d2dde57770e422c.webp',
-						price:799
+						price:769
 					},
 					{
 						id:getRand(),
@@ -1003,7 +1153,7 @@ const liNing = [
 const Anta = [
 	{
 		id:getRand(),
-		title:'Anta',
+		brand:'Anta',
 		logo:'https://pic2.imgdb.cn/item/644607950d2dde577713c264.png',
 		child:[
 			{
@@ -1055,7 +1205,7 @@ const Anta = [
 const PCbaby = [
 	{
 		id:getRand(),
-		title:'母婴用品',
+		brand:'母婴用品',
 		logo:undefined,
 		child:[
 			{
@@ -1091,7 +1241,7 @@ const PCbaby = [
 			{
 				id:getRand(),
 				name:'婴儿一次性隔尿垫宝宝尿布垫巾新生儿用品护理垫床垫不可洗',
-				price:'https://pic2.imgdb.cn/item/644618740d2dde57772bc1ea.jpg',
+				url:'https://pic2.imgdb.cn/item/644618740d2dde57772bc1ea.jpg',
 				price:58
 			},
 			{
@@ -1107,7 +1257,7 @@ const PCbaby = [
 const beddings = [
 	{
 		id:getRand(),
-		title:'床上用品',
+		brand:'床上用品',
 		logo:undefined,
 		child:[
 			{
@@ -1158,7 +1308,7 @@ const beddings = [
 const outdoors = [
 	{
 		id:getRand(),
-		title:'户外',
+		brand:'户外',
 		logo:undefined,
 		child:[
 			{
@@ -1210,7 +1360,7 @@ const outdoors = [
 const PHILIPS = [
 	{
 		id:getRand(),
-		title:'飞利浦',
+		brand:'飞利浦',
 		logo:'https://pic2.imgdb.cn/item/64464eb60d2dde57777698f3.png',
 		child:[
 			{
@@ -1238,7 +1388,7 @@ const PHILIPS = [
 const toread = [
 	{
 		id:getRand(),
-		title:'探路者',
+		brand:'探路者',
 		logo:'https://pic2.imgdb.cn/item/64464ff60d2dde577778b228.png',
 		child:[
 			{
@@ -1272,7 +1422,7 @@ const toread = [
 const casio = [
 	{
 		id:getRand(),
-		title:'卡西欧',
+		brand:'卡西欧',
 		logo:'https://pic2.imgdb.cn/item/644651370d2dde57777a07e5.png',
 		child:[
 			{
@@ -1312,7 +1462,7 @@ const casio = [
 const kitchen = [
 	{
 		id:getRand(),
-		title:'餐厨电器',
+		brand:'餐厨电器',
 		logo:undefined,
 		child:[
 			{
@@ -1352,7 +1502,7 @@ const kitchen = [
 const jewelry = [
 	{
 		id:getRand(),
-		title:'珠宝首饰',
+		brand:'珠宝首饰',
 		logo:'https://pic2.imgdb.cn/item/644654230d2dde57777d77f3.png',
 		child:[
 			{
@@ -1408,12 +1558,17 @@ const category = [
 	},
 	{
 		id:getRand(),
+		kw:'女装',
+		child:dress
+	},
+	{
+		id:getRand(),
 		kw:'乔丹专场',
 		child:jordon
 	},
 	{
 		id:getRand(),
-		kw:'李宁专场',
+		kw:'李宁LiNing',
 		child:liNing
 	},
 	{
@@ -1463,20 +1618,19 @@ const category = [
 	}
 ]
 
-
 // 楼层信息
 const floors = [
 	{
 		id:getRand(4),
 		desc:'自然堂CHANDO美妆个护专场 2.5折起自然堂CHANDO美妆个护专场',
 		img:'https://pic1.imgdb.cn/item/64421fbc0d2dde577716be3b.jpg',
-		kw:'自然堂美妆'
+		kw:'美容美妆'
 	},
 	{
 		id:getRand(4),
 		desc:'都市丽人内衣专场 5折封顶都市丽人内衣专场',
 		img:'https://pic1.imgdb.cn/item/64421fbd0d2dde577716be5f.jpg',
-		kw:'都市丽人内衣'
+		kw:'女装'
 	},
 	{
 		id:getRand(4),
@@ -1488,43 +1642,43 @@ const floors = [
 		id:getRand(4),
 		desc:'BANANA BABY女装专场 3.7折封顶BANANA BABY女装专场',
 		img:'https://pic1.imgdb.cn/item/64421fbd0d2dde577716bec8.jpg',
-		kw:'BANANA女装'
+		kw:'女装'
 	},
 	{
 		id:getRand(4),
 		desc:'精致防晒女孩分会场 1.1折起精致防晒女孩分会场',
 		img:'https://pic1.imgdb.cn/item/64421fbd0d2dde577716befc.jpg',
-		kw:'防晒'
+		kw:'美容美妆'
 	},
 	{
 		id:getRand(4),
 		desc:'Disney baby母婴鞋服专场 4.3折封顶Disney baby母婴鞋服专场',
 		img:'https://pic1.imgdb.cn/item/644221e20d2dde57771bc214.jpg',
-		kw:'Disney母婴鞋服'
+		kw:'母婴用品'
 	},
 	{
 		id:getRand(4),
-		desc:'百雀羚PECHOIN美容护肤专场 2折起百雀羚PECHOIN美容护肤专场',
+		desc:'自然堂PECHOIN美容护肤专场 2折起自然堂PECHOIN美容护肤专场',
 		img:'https://pic1.imgdb.cn/item/644221e20d2dde57771bc261.jpg',
-		kw:'百雀羚美容护肤'
+		kw:'美容美妆'
 	},
 	{
 		id:getRand(4),
 		desc:'DKNY男女装专场 2.5折封顶DKNY男女装专场',
 		img:'https://pic1.imgdb.cn/item/644221e30d2dde57771bc2d5.jpg',
-		kw:'DKNY男女装'
+		kw:'女装'
 	},
-	{
-		id:getRand(4),
-		desc:'七匹狼SEPTWOLVES男装专场 0.8折起七匹狼SEPTWOLVES男装专场',
-		img:'https://pic1.imgdb.cn/item/644221e30d2dde57771bc32c.jpg',
-		kw:'七匹狼男装'
-	},
+	// {
+	// 	id:getRand(4),
+	// 	desc:'七匹狼SEPTWOLVES男装专场 0.8折起七匹狼SEPTWOLVES男装专场',
+	// 	img:'https://pic1.imgdb.cn/item/644221e30d2dde57771bc32c.jpg',
+	// 	kw:'七匹狼男装'
+	// },
 	{
 		id:getRand(4),
 		desc:'小猪班纳母婴鞋服专场 1.2折起小猪班纳母婴鞋服专场',
 		img:'https://pic1.imgdb.cn/item/644221e30d2dde57771bc367.jpg',
-		kw:'小猪班纳母婴鞋服'
+		kw:'母婴'
 	},
 	{
 		id:getRand(4),
@@ -1534,9 +1688,9 @@ const floors = [
 	},
 	{
 		id:getRand(4),
-		desc:'太平鸟男装专场 1.8折起太平鸟男装专场',
+		desc:'太平鸟专场 1.8折起太平鸟专场',
 		img:'https://pic1.imgdb.cn/item/644221fe0d2dde57771c0b7d.jpg',
-		kw:'太平鸟男装'
+		kw:'女装'
 	},
 	{
 		id:getRand(4),
@@ -1560,49 +1714,49 @@ const floors = [
 		id:getRand(4),
 		desc:'卡西欧CASIO石英表专场 2.2折起卡西欧CASIO石英表专场',
 		img:'https://pic1.imgdb.cn/item/6442220a0d2dde57771c3494.jpg',
-		kw:'卡西欧CASIO石英表'
+		kw:'卡西欧CASIO'
 	},
 	{
 		id:getRand(4),
 		desc:'三枪内衣疯抢专场 3折封顶三枪内衣疯抢专场',
 		img:'https://pic1.imgdb.cn/item/6442220b0d2dde57771c34dd.jpg',
-		kw:'三枪内衣'
+		kw:'女装'
 	},
 	{
 		id:getRand(4),
 		desc:'一叶子One Leaf面部护理专场 2.2折起一叶子One Leaf面部护理专场',
 		img:'https://pic1.imgdb.cn/item/6442220b0d2dde57771c3555.jpg',
-		kw:'一叶子面部护理'
+		kw:'美容美妆'
 	},
 	{
 		id:getRand(4),
 		desc:'美的Midea餐厨用具电器专场 2折起美的Midea餐厨用具电器专场',
 		img:'https://pic1.imgdb.cn/item/6442220b0d2dde57771c35d8.jpg',
-		kw:'餐厨用具电器'
+		kw:'餐厨电器'
 	},
-	{
-		id:getRand(4),
-		desc:'爱步ECCO男女鞋专场 9.3折起爱步ECCO男女鞋专场',
-		img:'https://pic1.imgdb.cn/item/644225ae0d2dde5777214acc.jpg',
-		kw:'男女鞋'
-	},
+	// {
+	// 	id:getRand(4),
+	// 	desc:'爱步ECCO男女鞋专场 9.3折起爱步ECCO男女鞋专场',
+	// 	img:'https://pic1.imgdb.cn/item/644225ae0d2dde5777214acc.jpg',
+	// 	kw:'男女鞋'
+	// },
 	{
 		id:getRand(4),
 		desc:'saucony运动户外专场 2.2折起saucony运动户外专场',
 		img:'https://pic1.imgdb.cn/item/644222170d2dde57771c4af6.jpg',
-		kw:'运动户外'
+		kw:'户外'
 	},
 	{
 		id:getRand(4),
 		desc:'李宁LI-NING专场 2折起李宁LI-NING专场',
 		img:'https://pic1.imgdb.cn/item/644222180d2dde57771c4b30.jpg',
-		kw:'李宁LI-NING'
+		kw:'liNing'
 	},
 	{
 		id:getRand(4),
 		desc:'安踏ANTA专场 1.8折起安踏ANTA专场',
 		img:'https://pic1.imgdb.cn/item/644222180d2dde57771c4b50.jpg',
-		kw:'安踏ANTA'
+		kw:'ANTA'
 	},
 	{
 		id:getRand(4),
@@ -1614,53 +1768,57 @@ const floors = [
 		id:getRand(4),
 		desc:'华为HUAWEI数码电子专场 3.5折起华为HUAWEI数码电子专场',
 		img:'https://pic1.imgdb.cn/item/6442220b0d2dde57771c361e.jpg',
-		kw:'华为数码电子'
+		kw:'数码电子'
 	},
 	{
 		id:getRand(4),
 		desc:'6IXTY 8IGHT内衣专场 3.4折起6IXTY 8IGHT内衣专场',
 		img:'https://pic1.imgdb.cn/item/644222260d2dde57771c60e9.jpg',
-		kw:'内衣专场'
+		kw:'女装'
 	},
 	{
 		id:getRand(4),
 		desc:'小米MI数码家电专场 4.7折起小米MI数码家电专场',
 		img:'https://pic1.imgdb.cn/item/644222260d2dde57771c6148.jpg',
-		kw:'小米MI数码家电'
+		kw:'数码电子'
 	},
 	{
 		id:getRand(4),
 		desc:'慕诗涵女装专场 4折封顶慕诗涵女装专场',
 		img:'https://pic1.imgdb.cn/item/644222260d2dde57771c6188.jpg',
-		kw:'慕诗涵女装'
+		kw:'女装'
 	},
 	{
 		id:getRand(4),
 		desc:'奢姿女装专场 3.9折封顶奢姿女装专场',
 		img:'https://pic1.imgdb.cn/item/644222260d2dde57771c61e6.jpg',
-		kw:'奢姿女装'
+		kw:'女装'
 	},
 	{
 		id:getRand(4),
 		desc:'联想lenovo数码电子专场 2.3折起联想lenovo数码电子专场',
 		img:'https://pic1.imgdb.cn/item/644222270d2dde57771c622b.jpg',
-		kw:'lenovo数码电子'
+		kw:'数码电子'
 	},
 	{
 		id:getRand(4),
 		desc:'babycare母婴用品专场 1.6折起babycare母婴用品专场',
 		img:'https://pic1.imgdb.cn/item/6442222f0d2dde57771c6f95.jpg',
-		kw:'babycare母婴用品'
+		kw:'母婴用品'
 	},
 	{
 		id:getRand(4),
 		desc:'潘多拉PANDORA珠宝首饰专场 3.2折起潘多拉PANDORA珠宝首饰专场',
 		img:'https://pic1.imgdb.cn/item/6442222f0d2dde57771c6fde.jpg',
-		kw:'PANDORA珠宝首饰'
+		kw:'珠宝首饰'
 	}
 ]
 // 存储楼层信息，用于响应给前端
 let newFloors = []
+// 存放总商品数
+let goods = []
+// 存储总商品，也用于返回给前端
+let newGoods = []
 
 // 定义一个获取自定义长度的随机字符串
 function getRand(length = 4) {
@@ -1671,6 +1829,38 @@ function getRand(length = 4) {
     result += char.charAt(Math.floor(Math.random() * charLength))
   }
   return result
+}
+
+// 定义一个获取category中最里层的child方法，并返回
+function getAllGoodsInfo(goods){
+	let res = []
+	function traverse(g){
+		if(g.child && g.child.length > 0){
+			g.child.forEach(c=>{
+				traverse(c)
+			})
+		}
+		else res.push(g)
+	}
+	goods.forEach(i=>{
+		traverse(i)
+	})
+	return res
+}
+
+//定义一个根据一二级分类返回对应数据的方法
+function getChildByKwAndBrand(category, kw, brand) {
+    const result = [];
+    const regex = new RegExp(brand, 'i')
+    const targetCategory = category.find(cat => cat.kw === kw);
+    if (targetCategory) {
+        targetCategory.child.forEach(item => {
+            if (regex.test(item.brand)) {
+                result.push(...item.child);
+            }
+        })
+    }
+    return result;
 }
 
 // 获取轮播图
@@ -1751,7 +1941,7 @@ router.post('/api/floor',(req,res)=>{
 			status:200,
 			msg:'已全部加载完毕',
 			done
-		})
+		}).end()
 	}
 	else{	// 未全部加载
 		if(t * pageSize + pageSize -1 <= total)
@@ -1769,7 +1959,6 @@ router.post('/api/floor',(req,res)=>{
 })
 // 通过下拉刷新重新获取楼层信息
 router.post('/api/newfloor',(req,res)=>{
-	// console.log(req.body)
 	let curPage = req.body.page
 	const pageSize = req.body.pageSize
 	newFloors = floors.slice(curPage,curPage + pageSize)
@@ -1793,96 +1982,86 @@ router.get('/api/category',(req,res)=>{
 	}).end()
 })
 
-// 获取数码电子信息
-router.get('/api/digtalelectronics',(req,res)=>{
+router.get('/api/search',(req,res)=>{
+	let a=0,b=0,c = 0
+	const {query:{query:kw}} = req
+	const regex = new RegExp(kw,'i')
+	let goods = category.filter(item1=>regex.test(item1.kw))
+	res.send(goods).end()
+})
+
+// 获取总商品信息
+router.post('/api/allgoods',(req,res)=>{
+	goods = getAllGoodsInfo(category)
+	let {page,pageSize} = req.body
+	let curPage = page
+	pageSize = Math.floor(pageSize)
+	const total = goods.length
+	const size = Math.ceil(total/pageSize)
+	let t = curPage%size
+	const flg = total/pageSize
+	let done = false
+	if(curPage > flg){
+		done = true
+		res.send({
+			status:200,
+			msg:'已全部加载完毕',
+			done
+		}).end()
+	}else{
+		if(t*pageSize + pageSize - 1 <= total)
+			newGoods = goods.slice(t*pageSize,t*pageSize+pageSize)
+		else
+			newGoods = goods.slice(t*pageSize,total)
+		res.send({
+			status:200,
+			msg:'请求成功',
+			data:newGoods,
+			done
+		}).end()
+	}
+})
+// 通过下来刷新重新获取商品信息
+router.post('/api/newallgoods',(req,res)=>{
+	let curPage = req.body.page
+	const pageSize = req.body.pageSize
+	newGoods = goods.slice(curPage,curPage + pageSize)
 	res.send({
 		status:200,
 		msg:'请求成功',
-		data:digitalElectronics
+		data:newGoods
 	}).end()
 })
-router.get('/api/beauty',(req,res)=>{
+// 获取商品总数
+router.get('/api/allgoodslen',(req,res)=>{
 	res.send({
 		status:200,
 		msg:'请求成功',
-		data:beauty
+		data:goods.length
 	}).end()
 })
-router.get('/api/jordon',(req,res)=>{
+// 根据一二级分类返回商品
+router.get('/api/goods',(req,res)=>{
+	const {kw,brand} = req.query
+	const result = getChildByKwAndBrand(category,kw,brand)
 	res.send({
 		status:200,
 		msg:'请求成功',
-		data:jordon
+		data:getAllGoodsInfo(result)
 	}).end()
 })
-router.get('/api/lining',(req,res)=>{
+// 根据关键词返回品牌商品
+router.get('/api/goodsbyquery',(req,res)=>{
+	const {kw} = req.query
+	const regex = new RegExp(kw,'i')
+	const result = category.filter(c=>{
+		if(regex.test(c.kw))return c.child
+	})
 	res.send({
 		status:200,
 		msg:'请求成功',
-		data:liNing
-	})
+		data:getAllGoodsInfo(result)
+	}).end()
 })
-router.get('/api/anta',(req,res)=>{
-	res.send({
-		status:200,
-		msg:'请求成功',
-		data:Anta
-	})
-})
-router.get('/api/pcbaby',(req,res)=>{
-	res.send({
-		status:200,
-		msg:'请求成功',
-		data:PCbaby
-	})
-})
-router.get('/api/beddings',(req,res)=>{
-	res.send({
-		status:200,
-		msg:'请求成功',
-		data:beddings
-	})
-})
-router.get('/api/outdoors',(req,res)=>{
-	res.send({
-		status:200,
-		msg:'请求成功',
-		data:outdoors
-	})
-})
-router.get('/api/philips',(req,res)=>{
-	res.send({
-		status:200,
-		msg:'请求成功',
-		data:PHILIPS
-	})
-})
-router.get('/api/toread',(req,res)=>{
-	res.send({
-		status:200,
-		msg:'请求成功',
-		data:toread
-	})
-})
-router.get('/api/casio',(req,res)=>{
-	res.send({
-		status:200,
-		msg:'请求成功',
-		data:casio
-	})
-})
-router.get('/api/kitchen',(req,res)=>{
-	res.send({
-		status:200,
-		msg:'请求成功',
-		data:kitchen
-	})
-})
-router.get('/api/jewelry',(req,res)=>{
-	res.send({
-		status:200,
-		msg:'请求成功',
-		data:jewelry
-	})
-})
+
 module.exports = router

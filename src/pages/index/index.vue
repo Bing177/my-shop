@@ -12,7 +12,7 @@
 			class="swiper-item" 
 			v-for="(s,i) of swipers" 
 			:key="i"
-			@click="toDetail(s.id)"
+			@click="toGoodsList"
 			>
 				<image class="swiper-item-image" :src="s.image" mode="aspectFit"/>
 			</swiper-item>
@@ -56,7 +56,9 @@
 		},
 		onLoad() {
 			this.$store.dispatch('home/getSwiper')
-			this.$store.dispatch('home/getFloorInfo',{page:this.page++,pageSize:this.pageSize})
+			this.$store.dispatch('home/getFloorInfo',{
+				page:this.page++,pageSize:this.pageSize,
+			})
 			this.$store.dispatch('home/getFloorsLen')
 			this.getNavList()
 		},
@@ -78,11 +80,6 @@
 					console.log(e)
 				}
 			},
-			toDetail(id){
-				uni.navigateTo({
-					url:`/subpackage/detail/index?goods_id=${id}`
-				})
-			},
 			toPage(index){
 				index?
 				uni.switchTab({
@@ -93,9 +90,9 @@
 				})
 			},
 			toGoodsList(keyword){
-				uni.navigateTo({
-					url:`/subpackage/goods_list/index?kw=${keyword}`
-				})
+				typeof keyword === 'string' ? 
+				uni.navigateTo({url:`/subpackage/goods_list/index?kw=${keyword}`}):
+				uni.navigateTo({url:'/subpackage/goods_list/index'})
 			},
 			// 对上拉触底防抖处理
 			debounce:_.debounce(function(){

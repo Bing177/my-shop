@@ -39,7 +39,11 @@
 					"path": "login/index"
 				},
 				{
-					"path": "goods_list/index"
+					"path": "goods_list/index",
+					"style": {
+						"enablePullDownRefresh": true,
+						"onReachBottomDistance": 50
+					}
 				},
 				{
 					"path": "search/index"

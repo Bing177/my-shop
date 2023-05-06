@@ -27,12 +27,12 @@
 			</scroll-view>
 			<!-- 右侧展示区 -->
 			<scroll-view class="right" scroll-y="true">
-				<view class="brend">/商品品牌/</view>
+				<view class="brand">/商品品牌/</view>
 				<view class="content">
 					<block v-if="activeIndex===idx" v-for="(val,idx) of category" :key="idx">
-						<view class="item" v-for="(item,index) of val.child" :key="index">
+						<view class="item" @click="tobrandShop(val.kw,item.brand)" v-for="(item,index) of val.child" :key="index">
 							<image :src="item.logo" mode="aspectFit"/>
-							<text>{{item.title}}</text>
+							<text>{{item.brand}}</text>
 						</view>
 					</block>			
 				</view>
@@ -42,7 +42,7 @@
 </template>
 
 <script>
-	import Search from '@/components/search'
+	import Search from '@/components/my-search'
 	import {mapState} from 'vuex'
 	export default {
 		data(){
@@ -52,28 +52,13 @@
 		},
 		components:{Search},
 		computed:{
-			...mapState(
-				'category',
-				[
-					'category',
-					'digtalElectronics',
-					'beauty',
-					'jordon',
-					'lining',
-					'anta',
-					'pcbaby',
-					'beddings',
-					'outdoors',
-					'philips',
-					'toread',
-					'casio',
-					'kitchen',
-					'jewelry'
-				]
-			)
+			...mapState('category',['category',])
 		
 		},
 		methods:{
+			tobrandShop(kw,brand){
+				uni.navigateTo({url:`/subpackage/goods_list/index?kw=${kw}&brand=${brand}`})
+			},
 			toPage(){
 				uni.navigateTo({
 					url:'/subpackage/search/index'
@@ -85,19 +70,6 @@
 		},
 		mounted() {
 			this.$store.dispatch('category/getCategory')
-			this.$store.dispatch('category/getProductInfo','digtalElectronics')
-			this.$store.dispatch('category/getProductInfo','beauty')
-			this.$store.dispatch('category/getProductInfo','jordon')
-			this.$store.dispatch('category/getProductInfo','lining')
-			this.$store.dispatch('category/getProductInfo','anta')
-			this.$store.dispatch('category/getProductInfo','pcbaby')
-			this.$store.dispatch('category/getProductInfo','beddings')
-			this.$store.dispatch('category/getProductInfo','outdoors')
-			this.$store.dispatch('category/getProductInfo','philips')
-			this.$store.dispatch('category/getProductInfo','toread')
-			this.$store.dispatch('category/getProductInfo','casio')
-			this.$store.dispatch('category/getProductInfo','kitchen')
-			this.$store.dispatch('category/getProductInfo','jewelry')
 		}
 	}
 </script>
@@ -144,7 +116,7 @@
 		}
 		.right{
 			flex: 3;
-			.brend{
+			.brand{
 				width:100%;
 				height: 100rpx;
 				font-size: 30rpx;
